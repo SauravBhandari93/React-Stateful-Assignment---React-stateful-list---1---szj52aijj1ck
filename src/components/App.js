@@ -33,7 +33,13 @@ const App = () => {
           </>
         ))}
       </select>
-      <div>{value === "" ? "No year selected" : `Selected year-${value}`}</div>
+      <div>
+        {value === "" ? (
+          <div id="selected-year">No year selected</div>
+        ) : (
+          <div id="selected-year">Selected year-{value}</div>
+        )}
+      </div>
       {/* {console.log(data[value])} */}
       {value === "" ? (
         ""
